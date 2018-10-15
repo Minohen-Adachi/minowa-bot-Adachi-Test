@@ -154,7 +154,7 @@ def handle_message(event):
             event.reply_token,
             messages)
     # 箕輪編集室公式SNS情報を返す
-    elif 'SNS' == event.message.text:
+    elif 'SNS' == event.message.text or 'sns' == event.message.text:
         line_bot_api.reply_message(
             event.reply_token, [
                 TextSendMessage(
