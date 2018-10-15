@@ -153,6 +153,13 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             messages)
+    # 箕輪編集室公式SNS情報を返す
+    elif 'SNS' == event.message.text:
+        line_bot_api.reply_message(
+            event.reply_token, [
+                TextSendMessage(
+                    text='https://twitter.com/minowa_et'), TextSendMessage(
+                    text='https://www.instagram.com/minohen/')])
 
     else:
         # 特定の単語が入っていなければリストからランダムで返信する
