@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 import os
 import random
 
@@ -39,6 +36,7 @@ def callback():
 
     return 'OK'
 
+"""
 
 # ランダム返信用のリスト
 randomResList = []
@@ -56,6 +54,7 @@ resDictionary = {
     "死ぬこと以外は": "かすり傷",
     "読書という": "荒野",
     "たった一人の": "熱狂"
+    "長屋": "健斗"
 }
 
 
@@ -156,13 +155,6 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             messages)
-    # 箕輪編集室公式SNS情報を返す
-    elif 'sns' == event.message.text.lower():
-        line_bot_api.reply_message(
-            event.reply_token, [
-                TextSendMessage(
-                    text='https://twitter.com/minowa_et'), TextSendMessage(
-                    text='https://www.instagram.com/minohen/')])
 
     else:
         # 特定の単語が入っていなければリストからランダムで返信する
@@ -171,6 +163,7 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=reply))
 
+"""
 
 if __name__ == "__main__":
     # app.run()
