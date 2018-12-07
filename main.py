@@ -36,8 +36,6 @@ def callback():
 
     return 'OK'
 
-"""
-
 # ランダム返信用のリスト
 randomResList = []
 
@@ -163,7 +161,6 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=reply))
 
-"""
 
 if __name__ == "__main__":
     # app.run()
